@@ -132,23 +132,5 @@ namespace TDDPalestraXUnitExample3.Helpers
         {
             return DateTime.TryParseExact(date, "dd/MM/yyyy", CultureInfo.GetCultureInfo("pt-BR"), DateTimeStyles.None, out DateTime dateResult);
         }
-
-        /// <summary>
-        /// Verificar se o Enum é valido. 
-        /// 1) Objeto injetado deve ser do tipo Enum;
-        /// 2) Deve ser possível converter o paramentro, seja texto ou número, para um atribvuto válido do enum;
-        /// 3) Ao colocar um número inválido, o TryParse ignora e gera um falso positivo, então é verificado se o resultado é dígido.
-        /// -> Se o resultado é um digito, então é inválido pois o retorno do TryParse é o nome do atributo do Enum;
-        /// </summary>
-        /// <typeparam name="EnumType">Deve ser o Enum que deverá ser verificado</typeparam>
-        /// <param name="_enum">testo ou número do atributo do Enum</param>
-        /// <returns></returns>
-        public static bool IsValidEnum<EnumType>(string _enum)
-        {
-            if (!typeof(EnumType).IsEnum || !Enum.TryParse(typeof(EnumType), _enum, out object valueResult) || valueResult.ToString().All(c => char.IsDigit(c)))
-                return false;
-            return true;
-        }
-
     }
 }

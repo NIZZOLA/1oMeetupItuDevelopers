@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>Nizzola.Libray.User</title>
+    <authors>Márcio Nizzola</authors>
+    <owners>Nizzola</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <icon>images\nizzola.png</icon>   
+    <description>Bibilioteca de classe Usuário e suas validações</description>
+    <releaseNotes>
+      2022-06-18 - 1.0.0 - Versao Inicial
+    </releaseNotes>
+    <dependencies>
+      <group targetFramework="netstandard2.0" />
+    </dependencies>
+    <copyright>$copyright$</copyright>
+    <tags></tags>
+  </metadata>
+  <files>
+    <file src="..\nizzola.png" target="images\" />
+  </files>
+</package>
