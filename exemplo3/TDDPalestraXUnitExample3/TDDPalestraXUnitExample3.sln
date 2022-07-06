@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.489
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32510.428
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDDPalestraXUnitExample3", "TDDPalestraXUnitExample3\TDDPalestraXUnitExample3.csproj", "{6E9D6D20-1232-4787-BEC5-153B0DF55908}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TDDPalestraXUnitExample3", "TDDPalestraXUnitExample3\TDDPalestraXUnitExample3.csproj", "{6E9D6D20-1232-4787-BEC5-153B0DF55908}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitPalestraTDDExample3", "XUnitPalestraTDDExample3\XUnitPalestraTDDExample3.csproj", "{45A51049-66E0-4F54-B107-A726B4450006}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XUnitPalestraTDDExample3", "XUnitPalestraTDDExample3\XUnitPalestraTDDExample3.csproj", "{45A51049-66E0-4F54-B107-A726B4450006}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

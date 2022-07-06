@@ -41,6 +41,19 @@ namespace XUnitPalestraTDDExample3
             Assert.True(validationResult.IsValid);
         }
 
+        [Theory(DisplayName = "Should be a valid Genders")]
+        [InlineData(GenderEnum.Female)]
+        [InlineData(GenderEnum.Male)]
+        [InlineData(GenderEnum.Uninformed)]
+        public async Task ShouldBeAValidGenders(GenderEnum gender)
+        {
+            var instance = _builder.With(a => a.Gender = gender).Build();
+
+            var validationResult = await _validator.ValidateAsync(instance);
+            Assert.True(validationResult.IsValid);
+        }
+
+
         [Theory(DisplayName = "Should have a valid Password length")]
         [InlineData(1)]
         [InlineData(200)]
@@ -227,7 +240,7 @@ namespace XUnitPalestraTDDExample3
             Assert.Contains(validationResult.Errors, x => x.ToMetaError().Error.Message == AccountBusinessError.Account_CellphoneNumberIsInvalid.Description());
         }
 
-        [Theory(DisplayName = "CellPhoneNumber should be invalid")]
+        [Theory(DisplayName = "CellPhoneNumber should be valid")]
         [InlineData("(11) 99855-0515")]
         [InlineData("(21) 99855-0515")]
         [InlineData("(19) 94855-0515")]
@@ -236,6 +249,7 @@ namespace XUnitPalestraTDDExample3
             var instance = _builder.With(x => x.CellPhoneNumber = phoneNumber).Build();
             var validationResult = await _validator.ValidateAsync(instance);
             Assert.True(validationResult.IsValid);
+            Assert.Equal(phoneNumber, instance.CellPhoneNumber);
         }
 
         [Theory(DisplayName = "Email should be invalid")]
