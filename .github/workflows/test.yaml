@@ -19,10 +19,10 @@ jobs:
         dotnet-version: '9.0.101'  # Ajuste para a versão do .NET usada no projeto
 
     - name: Restore dependencies
-      run: dotnet restore exemplo3/TDDPalestraXUnitExample3/XUnitPalestraTDDExample3/TDDPalestraXUnitExample3.csproj
+      run: dotnet restore exemplo3/TDDPalestraXUnitExample3/XUnitPalestraTDDExample3/XUnitPalestraTDDExample3.csproj
 
     - name: Build project
-      run: dotnet build exemplo3/TDDPalestraXUnitExample3/XUnitPalestraTDDExample3/TDDPalestraXUnitExample3.csproj --configuration Release --no-restore
+      run: dotnet build exemplo3/TDDPalestraXUnitExample3/XUnitPalestraTDDExample3/XUnitPalestraTDDExample3.csproj --configuration Release --no-restore
 
     - name: Run tests
-      run: dotnet test exemplo3/TDDPalestraXUnitExample3/XUnitPalestraTDDExample3/TDDPalestraXUnitExample3.csproj --no-build --verbosity normal
+      run: dotnet test exemplo3/TDDPalestraXUnitExample3/XUnitPalestraTDDExample3/XUnitPalestraTDDExample3.csproj --no-build --verbosity normal
