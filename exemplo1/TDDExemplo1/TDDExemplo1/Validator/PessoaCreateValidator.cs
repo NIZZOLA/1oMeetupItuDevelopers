@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using TDDExemplo1.Models;
+﻿using TDDExemplo1.Models;
 
-namespace TDDExemplo1.Validator
+namespace TDDExemplo1.Validator;
+
+public class PessoaCreateValidator
 {
-    public class PessoaCreateValidator
+    public bool Validate( Pessoa pess)
     {
-        public bool Validate( Pessoa pess)
-        {
-
-            return false;
-
-        }
+        return true;
     }
 }
