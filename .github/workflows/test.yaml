@@ -25,4 +25,4 @@ jobs:
       run: dotnet build exemplo3/TDDPalestraXUnitExample3/XUnitPalestraTDDExample3/XUnitPalestraTDDExample3.csproj --configuration Release --no-restore
 
     - name: Run tests
-      run: dotnet test exemplo3/TDDPalestraXUnitExample3/XUnitPalestraTDDExample3/XUnitPalestraTDDExample3.csproj --no-build --verbosity normal
+      run: dotnet test exemplo3/TDDPalestraXUnitExample3/XUnitPalestraTDDExample3/XUnitPalestraTDDExample3.csproj --no-build --verbosity detailed --logger "console;verbosity=detailed"
