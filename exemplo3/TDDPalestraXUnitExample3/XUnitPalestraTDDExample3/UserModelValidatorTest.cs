@@ -14,10 +14,7 @@ public class UserModelValidatorTest
     private readonly UserModelBuilder _builder;
     public UserModelValidatorTest()
     {
-        var provider = new ServiceCollection().AddScoped<UserModelValidator>().BuildServiceProvider();
-
-        _validator = provider.GetService<UserModelValidator>();
-
+        _validator = new UserModelValidator();
         _builder = new UserModelBuilder();
     }
 
