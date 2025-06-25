@@ -16,7 +16,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: '9.0.0'  # Ajuste para a versão do .NET usada no projeto
+        dotnet-version: '9.0.101'  # Ajuste para a versão do .NET usada no projeto
 
     - name: Restore dependencies
       run: dotnet restore exemplo3/TDDPalestraXUnitExample3/XUnitPalestraTDDExample3/TDDPalestraXUnitExample3.csproj
