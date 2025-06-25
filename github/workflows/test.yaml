@@ -1,0 +1,28 @@
+name: Run Unit Tests
+
+on:
+  push:
+    branches:
+      - '**'  # Executa em qualquer branch
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '9.0.0'  # Ajuste para a versão do .NET usada no projeto
+
+    - name: Restore dependencies
+      run: dotnet restore exemplo3/TDDPalestraXUnitExample3/XUnitPalestraTDDExample3/TDDPalestraXUnitExample3.csproj
+
+    - name: Build project
+      run: dotnet build exemplo3/TDDPalestraXUnitExample3/XUnitPalestraTDDExample3/TDDPalestraXUnitExample3.csproj --configuration Release --no-restore
+
+    - name: Run tests
+      run: dotnet test exemplo3/TDDPalestraXUnitExample3/XUnitPalestraTDDExample3/TDDPalestraXUnitExample3.csproj --no-build --verbosity normal

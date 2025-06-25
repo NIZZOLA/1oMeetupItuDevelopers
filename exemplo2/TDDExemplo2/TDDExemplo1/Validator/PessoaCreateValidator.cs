@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using TDDExemplo1.Models;
+﻿using TDDExemplo1.Models;
 using TDDExemplo1.Validator.ValidationRules;
 
 namespace TDDExemplo1.Validator
